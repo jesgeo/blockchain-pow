@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "f31210ed-1efe-414a-a5eb-06a21ae827ac",
+		"name": "Block",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Public Key",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a25d08ca-b0b6-46ae-8db3-6995e157e82d",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}3003/public-key",
+					"host": [
+						"{{url}}3003"
+					],
+					"path": [
+						"public-key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Blocks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}3003/blocks",
+					"host": [
+						"{{url}}3003"
+					],
+					"path": [
+						"blocks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transact",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"recipient\": \"044300b4c84cdeb9786da5099dc2055c78d64cc9f1efda11368a8ac7f99b544c7c41d85c948ab458eaf153bcf310739b02bd4c726b977e282d30616e0324e02296\",\n\t\"amount\": 100\n}"
+				},
+				"url": {
+					"raw": "{{url}}3003/transact",
+					"host": [
+						"{{url}}3003"
+					],
+					"path": [
+						"transact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}3003/transactions",
+					"host": [
+						"{{url}}3003"
+					],
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mine Transactions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}3003/mine-transactions",
+					"host": [
+						"{{url}}3003"
+					],
+					"path": [
+						"mine-transactions"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
